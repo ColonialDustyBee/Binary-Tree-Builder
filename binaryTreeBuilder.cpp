@@ -27,6 +27,7 @@ TreeNode* findPositionOfNode(TreeNode* parent, int a) {
         }
     }
 }
+
 void addNodesToTree(std::string& edgeCase, TreeNode* parent, TreeNode*& child, int a, int b) {
     TreeNode* temp = findPositionOfNode(parent, a);
     if (edgeCase == "L") {
@@ -84,7 +85,7 @@ int main() {
     fileIO.open(input);
     if(fileIO.is_open()){
         while (!fileIO.eof()) {
-            if (!first) {
+            if (!first) { // Basically initializes the parent and child node in the first line.
                 getline(fileIO, input, ',');
                 a = stoi(input);
                 getline(fileIO, input, ' ');
